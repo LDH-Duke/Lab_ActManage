@@ -5,33 +5,44 @@ a {
   color: black;
 }
 
+
+
 .wrap {
   min-width: auto;
   min-height: 670px;
   height: 100%;
   position: relative;
+  height: 100vh;
+  background: url("../images/dsu_image1.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 50px;
 }
 
+
+
 .login_box {
-  padding-left: 40%;
+  padding-left: 50%;
   position: absolute;
   top: 50%;
-  margin-top: 110px;
+  margin-top: -100px;
   width: 100%;
+  transition: all 1s;
+
 }
+
+
+/* 슬라이드 배경 */
+
 
 /*로그인 */
 .login_inner {
   background-color: #eee0ce;
+  border-radius: 50px 0 0 0;
+  box-shadow: -10px 15px 7px 5px rgba(0, 0, 0, 0.45);
 }
 
 .login_form {
   display: flex;
-  padding-left: 50px;
-}
-
-/*내부로고*/
-.logo {
   padding-left: 50px;
 }
 
@@ -60,9 +71,32 @@ a {
   align-items: center;
   padding: 30px;
   border-radius: 5px;
-
   background-color: var(--point-color);
   color: var(--font-color);
+}
+
+
+/*내부로고*/
+
+.logo::before {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 35px;
+  background: url("../images/동서대학교로고\(배경없음\).png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 30px;
+}
+
+.logo {
+  margin: 0px;
+  padding: 80px 0 0 50px;
+  position: relative;
+}
+
+.login_tab {
+  padding-top: 30px;
 }
 
 .login_tab>ul {
@@ -82,7 +116,7 @@ a {
   right: 0;
 } */
 
-
+/* 로그인 하단 탭 */
 .login_tab>ul>li>a {
   display: block;
 }
@@ -104,4 +138,12 @@ a {
 
 .help_btn>li>a {
   padding: 10px 20px;
+}
+
+.login_footer {
+  background-color: var(--loginFoot-color);
+}
+
+.login_footer>li {
+  padding: 10px;
 }
